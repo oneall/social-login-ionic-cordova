@@ -1,6 +1,11 @@
 <ion-view ng-controller="LoginController" title="OneAll Social Login">
     <ion-content>
-        <div>
+		<div ng-show="!oneall_subdomain.length">
+			<div class="item assertive">
+				Please enter your OneAll subdomain in <strong>app.js</strong>
+			</div>		
+		</div>    
+        <div ng-show="oneall_subdomain.length">
             <div class="padding">
                 <button ng-click="social_login('facebook')" class="button button-large button-full button-positive">
 					Login with Facebook

@@ -3,12 +3,11 @@
 		<i class="ion-arrow-left-c"></i> Back
 	</ion-nav-back-button>
     <ion-content>
-        <div>
+        <div ng-show="oneall_identity.source.name.length">
             <div class="padding">
-				<h2>Logged with {{oneall_identity.source.name}}</h2>
-	
+				<h2>Logged with {{oneall_identity.source.name}}</h2>	
 				<div class="item item-thumbnail-left">
-					<img ng-show="oneall_identity.pictureUrl.length" src="{{oneall_identity.pictureUrl}}" />
+					<img ng-show="oneall_identity.pictureUrl.length" src="{{oneall_identity.pictureUrl}}">
 					<h2>{{oneall_identity.preferredUsername}}</h2>
 					<p>
 						<div ng-show="oneall_identity.name.formatted.length">
@@ -17,14 +16,13 @@
 						<div ng-show="oneall_identity.currentLocation.length">
 							{{oneall_identity.currentLocation}}
 						</div>
-
 						<div ng-show="oneall_identity.gender.length">
 							{{oneall_identity.gender}}
 						</div>
-
 						<div ng-show="oneall_identity.emails[0].value.length">
 							{{oneall_identity.emails[0].value}}						
 						</div>
+					 </p>
 				</div>
             </div>
         </div>

@@ -1,7 +1,12 @@
-var oneall_subdomain = 'oneall';
+
+/* Add your OneAll Subdomain Here */
+var oneall_subdomain = '';
+
+/* Leave As Is */
 var oneall_connection_token = '';
 var oneall_identity = '';
  
+/* Routes */
 var oneallApp = angular.module('social-login', ['ionic']).config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state('login', {
@@ -17,10 +22,13 @@ var oneallApp = angular.module('social-login', ['ionic']).config(function($state
 		$urlRouterProvider.otherwise('/login');
 });
 
-oneallApp.controller('LoginController', function($scope, $http, $location) {
+/* Login / Callback */
+oneallApp.controller('LoginController', function($scope, $http, $location) {	
+	$scope.oneall_subdomain = oneall_subdomain;    
+
     $scope.social_login = function(social_network_key) {
 		var nonce, callback_uri, connect_uri, window_ref, uid_v4, received_url;
-
+		
 		uid_v4 = function () {
 			var g4 = function() {
 				return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
@@ -67,13 +75,11 @@ oneallApp.controller('LoginController', function($scope, $http, $location) {
         String.prototype.startsWith = function (str){
             return this.indexOf(str) == 0;
         };
-    }
-    
+    }    
 });
 
- 
+
+/* Callback Info */
 oneallApp.controller('WelcomeController', function($scope, $http) {
      $scope.oneall_identity = oneall_identity;    
 });
-
-
