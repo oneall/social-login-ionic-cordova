@@ -8,7 +8,7 @@ You need to setup your OneAll Subdomain in<br />
 the <b>www/js/app.js</b> file before being able to use the app.
 
 ## Debugging
-<code>adb logcat | grep `adb shell ps | grep sociallogin | cut -c10-15`</code>
+` adb logcat | grep `adb shell ps | grep sociallogin | cut -c10-15`
 
 ## Supported Social Networks
 * Amazon
