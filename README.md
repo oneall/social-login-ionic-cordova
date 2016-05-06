@@ -1,6 +1,6 @@
 # Social Login
 Social Login allows your users to login and register with 30+ social networks. 
-It increases your phpBB user registration rate by simplifying the registration process for 
+It increases the user registration rate of your app by simplifying the registration process for 
 new users and provides permission-based social data retrieved from the social network profiles.
 
 ## Important
